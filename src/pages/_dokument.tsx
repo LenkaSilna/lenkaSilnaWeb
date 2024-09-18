@@ -1,6 +1,5 @@
 import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document';
 import { ServerStyleSheet } from 'styled-components';
-import SEO from '../components/SEO';
 
 class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {
@@ -32,7 +31,12 @@ class MyDocument extends Document {
   render() {
     return (
       <Html lang="en">
-        <SEO page="home" />
+        <Head>
+          <link rel="icon" href="/images/vite.svg" type="image/svg+xml" />
+          <link rel="shortcut icon" href="/images/vite.ico" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+          <meta name="theme-color" content="#242424" />
+        </Head>
         <body>
           <Main />
           <NextScript />

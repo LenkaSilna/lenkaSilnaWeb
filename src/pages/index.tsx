@@ -1,3 +1,4 @@
+import SEO from '../components/SEO'
 import {useTranslation} from '../localization'
 import styled from 'styled-components'
 
@@ -13,11 +14,12 @@ const Home = () => {
 	const {t} = useTranslation()
 
 	return (
-		<div>
+		<>
+			<SEO page="home"/>
 			<Main>
 				<h1>{t('Hi I am Lenka')}</h1>
 			</Main>
-		</div>
+		</>
 	)
 }
 
